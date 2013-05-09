@@ -32,11 +32,6 @@ mysql_connection_info = {:host => "localhost",
                          :username => 'root',
                          :password => node['mysql']['server_root_password']}
 
-mysql_database 'test' do
-  connection mysql_connection_info
-  action :drop
-end
-
 # removing insecure default mysql users
 mysql_database_user 'drop empty localhost user' do
   username ''
@@ -45,6 +40,7 @@ mysql_database_user 'drop empty localhost user' do
   action :drop
 end
 
+# removing insecure default mysql users
 mysql_database_user 'drop empty hostname user' do
   username ''
   host node.hostname
@@ -52,6 +48,13 @@ mysql_database_user 'drop empty hostname user' do
   action :drop
 end
 
+# drop the test database
+mysql_database 'test' do
+  connection mysql_connection_info
+  action :drop
+end
+
+# flush the privileges
 mysql_database "FLUSH privileges" do
   connection mysql_connection_info
   sql "FLUSH privileges"
