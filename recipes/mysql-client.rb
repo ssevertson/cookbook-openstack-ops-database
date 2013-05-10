@@ -20,4 +20,4 @@
 include_recipe "mysql::ruby"
 include_recipe "mysql::client"
 
-node.default['openstack']['packages']['os-ops-database'] = node['openstack']['database']['mysql_python_packages']
+node.default['openstack']['packages']['os-ops-database'] = node['openstack']['database']['platform']['mysql_python_packages']
