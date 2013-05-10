@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: openstack-ops-database
-# Recipe:: default
+# Recipe:: client
 #
 # Copyright 2013, Opscode, Inc.
 #
@@ -17,4 +17,4 @@
 # limitations under the License.
 #
 
-include_recipe "openstack-ops-database::#{node['openstack']['database']['service']}"
+include_recipe "openstack-ops-database::#{node['openstack']['database']['service']}-client"

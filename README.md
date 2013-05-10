@@ -24,7 +24,7 @@ None
 
 # Recipes #
 
-## default ##
+## client ##
 
 - database client configuration, selected by attributes
 
