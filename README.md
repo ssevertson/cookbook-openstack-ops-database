@@ -34,7 +34,7 @@ None
 
 ## mysql-client ##
 
-- calls mysql::ruby and mysql::client
+- calls mysql::ruby and mysql::client and installs 'mysql_python_packages'
 
 ## mysql-server ##
 
@@ -44,6 +44,7 @@ None
 
 * `default['openstack']['role']['database]` - which role should other nodes search on to find the database service, defaults to 'os-ops-database'
 * `default['openstack']['database']['service']` - which service to use, defaults to 'mysql'
+* `default['openstack']['database']['platform']['mysql_python_packages']` - platform-specific mysql python packages to install
 
 # Templates #
 
