@@ -22,6 +22,10 @@ The following cookbooks are dependencies:
 
 None
 
+# Templates #
+
+None
+
 # Recipes #
 
 ## client ##
@@ -42,13 +46,10 @@ None
 
 # Attributes #
 
-* `default['openstack']['role']['database]` - which role should other nodes search on to find the database service, defaults to 'os-ops-database'
-* `default['openstack']['database']['service']` - which service to use, defaults to 'mysql'
-* `default['openstack']['database']['platform']['mysql_python_packages']` - platform-specific mysql python packages to install
+* `openstack['role']['database]` - which role should other nodes search on to find the database service, defaults to 'os-ops-database'
 
-# Templates #
-
-None
+* `openstack['database']['service']` - which service to use, defaults to 'mysql'
+* `openstack['database']['platform']['mysql_python_packages']` - platform-specific mysql python packages to install
 
 License and Author
 ==================
