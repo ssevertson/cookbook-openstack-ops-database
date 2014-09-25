@@ -34,11 +34,6 @@ else
   super_password = node['mysql']['server_root_password']
 end
 
-node.set['mysql']['version'] = default_version_for(
-                                 node['platform'],
-                                 node['platform_family'],
-                                 node['platform_version']
-                               )
 node.override['mysql']['tunable']['default-storage-engine'] = 'InnoDB'
 node.override['mysql']['bind_address'] = db_endpoint.host
 node.override['mysql']['tunable']['innodb_thread_concurrency'] = '0'
